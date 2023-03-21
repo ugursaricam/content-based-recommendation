@@ -4,7 +4,8 @@
 
 dataset: https://www.kaggle.com/rounakbanik/the-movies-dataset
 
-##Variables:
+## Variables:
+
 * **movieId**: a unique identifier for each movie in the dataset
 * **title**: the title of the movie
 * **genres**: the genre(s) of the movie
