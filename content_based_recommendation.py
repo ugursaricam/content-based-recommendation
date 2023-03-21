@@ -24,7 +24,7 @@ pd.set_option('display.width', 1000)
 # pd.set_option('display.float_format', lambda x: '%.5f' % x)
 
 # read the data into a pandas dataframe
-df = pd.read_csv("datasets/the_movies_dataset/movies_metadata.csv", low_memory=False)
+df = pd.read_csv('datasets/the_movies_dataset/movies_metadata.csv', low_memory=False)
 
 # define function to check the dataframe
 def check_df(dataframe, head=5):
@@ -145,12 +145,12 @@ def content_based_recommender(title, cosine_sim, dataframe):
     indices = pd.Series(dataframe.index, index=dataframe['title'])
     indices = indices[~indices.index.duplicated(keep='first')]
     movie_index = indices[title]
-    similarity_scores = pd.DataFrame(cosine_sim[movie_index], columns=["score"])
-    movie_indices = similarity_scores.sort_values("score", ascending=False)[1:11].index
+    similarity_scores = pd.DataFrame(cosine_sim[movie_index], columns=['score'])
+    movie_indices = similarity_scores.sort_values('score', ascending=False)[1:11].index
     return dataframe['title'].iloc[movie_indices]
 
 # Generate content-based recommendations for the Sherlock Holmes movie
-content_based_recommender("Sherlock Holmes", cosine_sim, df)
+content_based_recommender('Sherlock Holmes', cosine_sim, df)
 
 # 3166                                  They Might Be Giants
 # 4434                                        Without a Clue
@@ -164,7 +164,7 @@ content_based_recommender("Sherlock Holmes", cosine_sim, df)
 # 14821                                    The Royal Scandal
 
 # Generate content-based recommendations for The Matrix movie
-content_based_recommender("The Matrix", cosine_sim, df)
+content_based_recommender('The Matrix', cosine_sim, df)
 
 # 44161                        A Detective Story
 # 44167                              Kid's Story
