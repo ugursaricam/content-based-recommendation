@@ -2,6 +2,11 @@
 # Content Based Recommendation
 #################################
 
+# 1. Creating the TF-IDF Matrix
+# 2. Creating the Cosine Similarity Matrix
+# 3. Making Recommendations Based on Similarities
+# 4. Preparing the Working Script
+
 #################################
 # 1. Creating the TF-IDF Matrix
 #################################
